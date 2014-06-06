@@ -11,7 +11,7 @@ plot1 <- function() {
 # define device and plot
 ## -------------------------  
   
-  png(filename="plot1.png")
+  png(filename="plot1.png",480,480)
   hist(spower$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red")
   dev.off() 
   

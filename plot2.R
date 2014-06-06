@@ -13,9 +13,9 @@ spower$dt.time <- as.POSIXct(paste(spower$Date, spower$Time),format="%d/%m/%Y %H
 ## -------------------------
 # define device and plot
 ## -------------------------  
-png(filename="plot2.png")
+png(filename="plot2.png",480,480)
 plot(spower$dt.time,spower$Global_active_power , type="o", col="black",pch=".",ylab="Global Active Power (kilowatts)",xlab="")
-  dev.off() 
+dev.off() 
   
   
 }
