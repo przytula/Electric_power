@@ -1,4 +1,4 @@
-plot2 <- function() {
+plot3 <- function() {
 ## -------------------------
 ## read input file  
 ## -------------------------
@@ -13,9 +13,15 @@ spower$dt.time <- as.POSIXct(paste(spower$Date, spower$Time),format="%d/%m/%Y %H
 ## -------------------------
 # define device and plot
 ## -------------------------  
-png(filename="plot2.png")
-plot(spower$dt.time,spower$Global_active_power , type="o", col="black",pch=".",ylab="Global Active Power (kilowatts)",xlab="")
+png(filename="plot3.png")
+plot(spower$dt.time,spower$Sub_metering_1 , type="o", col="black",pch=".",ylab="Energy sub metering",xlab="")
   dev.off() 
-  
-  
+lines(spower$dt.time,spower$Sub_metering_2 , type="o", col="red",pch=".",ylab="Energy sub metering",xlab="")
+lines(spower$dt.time,spower$Sub_metering_3 , type="o", col="blue",pch=".",ylab="Energy sub metering",xlab="")
+
+
+
+legend("topright",  c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),  lty=c(1,1),        
+       lwd=c(2.5,2.5),col=c("black","red","blue")) 
+
 }
