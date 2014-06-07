@@ -14,7 +14,7 @@ spower$dt.time <- as.POSIXct(paste(spower$Date, spower$Time),format="%d/%m/%Y %H
 # define device and plot
 ## -------------------------  
 
-png(filename="plot4.png",480,480)
+# png(filename="plot4.png",480,480)
 par(mfcol=c(2,2))
 # ---------
 # topleft plot2
@@ -40,9 +40,5 @@ plot(spower$dt.time,spower$Voltage , type="o", col="black",pch=".",ylab="Voltage
 plot(spower$dt.time,spower$Global_reactive_power , type="o", col="black",pch=".",ylab="Voltage",xlab="datetime",cex.lab=0.8)
 
 
-
-
-
-
-dev.off()
+# dev.off()
 }
